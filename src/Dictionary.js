@@ -8,23 +8,14 @@ export default function Dictionary(){
     let [results, setResults] = useState(null);
 
     function handleResponse(response){
-        console.log("ICI")
-        console.log(response.data[0])
         setResults(response.data[0]);
-        console.log(response.data[0])
-        console.log(response.data[0].meanings[0].definitions[0].definitions);
-     
     }
     
     function search(event){
         event.preventDefault();
-        console.log(`Searching for ${language} definition`)
         //Documentation
             alert(`Searching for ${keyword} definition`);
-        
               let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/${language}/${keyword}`;
-              console.log("ICI KEYWORK")
-              console.log(keyword)
               axios.get(apiUrl).then(handleResponse);
     }
 

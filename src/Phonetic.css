@@ -1,0 +1,23 @@
+.Phonetic {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    color: rgb(0, 0, 0);
+    background: rgb(39, 127, 185);
+    border-radius: 20px;
+    color: rgb(241, 215, 168);
+    transition: all 150ms ease-in-out;
+  }
+  .btn:hover {
+    color: rgb(39, 127, 185);
+    background: rgb(241, 215, 168);
+  }
+  
+  .Phonetic .phonetic-text {
+    display: inline-block;
+    font-size: 20px;
+    margin: 2px 0 2px 20px;
+    color: rgb(241, 215, 168);
+  }
