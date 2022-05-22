@@ -1,20 +1,32 @@
 .App {
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-image: url(../images/background.jpg);
+    background-attachment: fixed;
+    
 }
 
 .App-logo {
   position: relative;
-  top: -430px;
+  top: -400px;
   height: 30vmin;
   pointer-events: none;
 }
 
 .App-logo2 {
   position: relative;
-  top: -670px;
+  top: -640px;
   left: -5px;
   height: 10vmin;
   pointer-events: none;
+}
+
+.text-center {
+  background-color: rgb(52, 48, 48);
+  color: azure;
+  margin: 0px 20px;
+  width: 400px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,7 +36,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
+/*   opacity: .9;
+  background-color: #1398bd;
+  background-repeat: no-repeat; */
+  background-size: cover;
   border: 2rem beige;
   min-height: 100vh;
   display: flex;

@@ -12,7 +12,7 @@ function App() {
         <img src={logo2} className="App-logo2" alt="logo2" />
       </header>
       <main>
-        <Dictionary />
+        <Dictionary defaultKeyword="sunset" />
       </main>
       <footer className="text-center">Coded By KathouQC <a href="https://thunderous-yeot-538994.netlify.app/">Open-Source</a></footer>
       </div>

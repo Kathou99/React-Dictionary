@@ -1,0 +1,12 @@
+.Meaning .difinition {
+    color: blue;
+    font-size: 15px;
+    color: #70757a;
+    font-style: italic;
+}
+
+.Meaning h3{
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: bold;
+}

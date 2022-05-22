@@ -1,22 +1,27 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
-import './Dictionary.css'
+import './Dictionary.css';
 
-export default function Dictionary(){
-    let [keyword, setKeyword, setLanguage, language ="en"] =  useState("");
+export default function Dictionary(props){
+    let [keyword, setKeyword, setLanguage, language ="en"] =  useState(props.defaultKeyword);
     let [results, setResults] = useState(null);
+    let [loaded, setLoaded] = useState("");
 
     function handleResponse(response){
         setResults(response.data[0]);
     }
     
-    function search(event){
+    function search(){
+          //Documentation
+         /*  alert(`Searching for ${keyword} definition`); */
+          let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/${language}/${keyword}`;
+          axios.get(apiUrl).then(handleResponse);
+    }
+
+    function handleSubmit(event){
         event.preventDefault();
-        //Documentation
-            alert(`Searching for ${keyword} definition`);
-              let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/${language}/${keyword}`;
-              axios.get(apiUrl).then(handleResponse);
+        search();
     }
 
     function handleKeywordChange(event){
@@ -27,17 +32,34 @@ export default function Dictionary(){
         setLanguage(event.target.value);
     }
 
-    return <div className="Dictionary">
-         <form onSubmit={search}>
-             <input type="search" autoFocus={true} onChange={handleKeywordChange} placeholder="Please Enter a word"/>
+    function load(){
+        setLoaded(true);
+        search();
+    }
+
+    if (loaded){
+        return <div className="Dictionary">
+        <section>
+            <h4>What word do you want to look up??</h4>
+            <br />
+        <form onSubmit={handleSubmit}>
+             <input type="search" autoFocus={true} onChange={handleKeywordChange} defaultValue={props.defaultKeyword}   placeholder="Please Enter a word"/>
          </form>
          <br></br>
-         <label  htmlFor="lagnuges">Choose language:</label>
+         <label id="lang" htmlFor="lagnuges">Choose language:</label>
           <select id="cars" onChange={handlelanguage}>
             <option value="en" defaultValue={true}>English</option>
             <option value="fr">French</option>
             <option value="sp">Spanish</option>
            </select>
+        </section>
            <Results  results={results}/>
-    </div>
-}  
+      </div>
+    }else {
+        load();
+        return "Loading";
+    }
+}
+
+    
+
