@@ -14,7 +14,7 @@ function App() {
       <main>
         <Dictionary />
       </main>
-      <footer class="text-center">Coded By KathouQC</footer>
+      <footer className="text-center">Coded By KathouQC</footer>
       </div>
     </div>
   );
