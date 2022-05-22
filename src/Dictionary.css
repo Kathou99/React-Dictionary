@@ -36,3 +36,10 @@
     font-size:11px;
     margin-top: 5px;
 }
+
+@media (max-width: 750px) {
+    .Dictionary input {
+      width: 90%;
+      padding: 7px 17px;
+    }
+  }

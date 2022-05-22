@@ -62,3 +62,27 @@
     transform: rotate(360deg);
   }
 }
+
+
+@media (max-width: 750px) {
+  .App {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .dictionary-title {
+    font-size: 40px;
+    font-family: "Shrikhand", cursive;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 2;
+    color: var(--primary-color);
+    margin: 30px auto 20px;
+  }
+
+  .App-footer {
+    margin: 30px 10px;
+    text-align: center;
+    color: var(--primary-color);
+  }
+}
