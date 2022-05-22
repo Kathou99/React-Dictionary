@@ -14,7 +14,7 @@ function App() {
       <main>
         <Dictionary />
       </main>
-      <footer className="text-center">Coded By KathouQC</footer>
+      <footer className="text-center">Coded By KathouQC <a href="https://thunderous-yeot-538994.netlify.app/">Open-Source</a></footer>
       </div>
     </div>
   );
