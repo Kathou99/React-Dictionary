@@ -14,7 +14,27 @@ function App() {
       <main>
         <Dictionary defaultKeyword="sunset" />
       </main>
-      <footer className="text-center">Coded By KathouQC <a href="https://thunderous-yeot-538994.netlify.app/">Open-Source</a></footer>
+          <footer className="App-footer">
+          <small>
+      ©CopyRight 2022 {" "}
+            <a
+              href="https://github.com/Kathou99/React-Dictionary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              open-sourced on GitHub
+            </a>{" "}
+            by {" "}
+            <a
+              href="https://kathouqccode.ca/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              KathouQC
+            </a>
+             
+          </small>
+          </footer>
       </div>
     </div>
   );

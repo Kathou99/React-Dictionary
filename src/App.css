@@ -23,10 +23,10 @@
 }
 
 .text-center {
-  background-color: rgb(52, 48, 48);
   color: azure;
   margin: 0px 20px;
   width: 400px;
+  bottom: 50px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,10 +35,19 @@
   }
 }
 
+small {
+  color: white;
+}
+
+small a {
+  color: #61dafb;
+}
+
+small a:hover{
+  color: aqua;
+}
+
 .App-header {
-/*   opacity: .9;
-  background-color: #1398bd;
-  background-repeat: no-repeat; */
   background-size: cover;
   border: 2rem beige;
   min-height: 100vh;
@@ -63,6 +72,12 @@
   }
 }
 
+.App-footer {
+  text-align: center;
+  position: relative;
+  bottom: 50px;
+  font-size: 25px;
+}
 
 @media (max-width: 750px) {
   .App {
